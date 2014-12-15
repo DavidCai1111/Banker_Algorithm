@@ -11,7 +11,7 @@ block content
           span P#{item},
         else
           span P#{item}
-      |}
+      |},请在表单下方发送一条请求向量，或返回首页。
   else if succeed == true && finish == true
     if passed
     - var len = passed.length
@@ -22,7 +22,7 @@ block content
           span P#{item},
         else
           span P#{item}
-      |}
+      |}，请继续发送请求向量，或返回首页
   else if finish == false
     h3.text-center.bg-danger 接受请求失败，请重新填入请求资源数。
     if passed
@@ -81,36 +81,72 @@ block content
         td
           .row
             .col-xs-4
-              input.form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
         td
           .row
             .col-xs-4
-              input.form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
         td
           .row
             .col-xs-4
-              input.form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
             .col-xs-4
-              input.form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
+              if succeed !== true
+                input.form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
+              else
+                input(disabled="disabled").form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
         if table
           td.avai(rowspan="#{lenOfP}")
             .row
               .col-xs-4
-                input.form-control(type="text",name="[avai][0]",value="#{table.avai[0]}")
+                if succeed !== true
+                  input.form-control(type="text",name="[avai][0]",value="#{table.avai[0]}")
+                else
+                  input(disabled="disabled").form-control(type="text",name="[avai][0]",value="#{table.avai[0]}")
               .col-xs-4
-                input.form-control(type="text",name="[avai][1]",value="#{table.avai[1]}")
+                if succeed !== true
+                  input.form-control(type="text",name="[avai][1]",value="#{table.avai[1]}")
+                else
+                  input(disabled="disabled").form-control(type="text",name="[avai][1]",value="#{table.avai[1]}")
               .col-xs-4
-                input.form-control(type="text",name="[avai][2]",value="#{table.avai[2]}")
+                if succeed !== true
+                  input.form-control(type="text",name="[avai][2]",value="#{table.avai[2]}")
+                else
+                  input(disabled="disabled").form-control(type="text",name="[avai][2]",value="#{table.avai[2]}")
         td
           if succeed == true
             button.btn-primary.btn(disabled="disabled") true
@@ -125,27 +161,54 @@ block content
             td
               .row
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
             td
               .row
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
             td
               .row
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
                 .col-xs-4
-                  input.form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
+                  if succeed !== true
+                    input.form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
+                  else
+                    input(disabled="disabled").form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
             td
               if succeed == true
                 button.btn-primary.btn(disabled="disabled") true
