@@ -45,7 +45,7 @@ $(function(){
           input.val(valueBefore);
           return;
         };
-        if(valueAfter[0] == 0 ){
+        if(valueAfter[0] == 0 && valueAfter.length >= 2){
           valueAfter = valueAfter.slice(1,2);
           input.attr("value",valueAfter);
           input.val(valueAfter);
