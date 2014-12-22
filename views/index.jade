@@ -79,54 +79,54 @@ block content
       tr
         td P0
         td
-          .row
+          .row.row0
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
+                input.col0.max.form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
               else
-                input(disabled="disabled").form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
+                input(disabled="disabled").max.form-control(type="text",name="[0][0][0]",value="#{table[0][0][0]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
+                input.col1.max.form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
               else
-                input(disabled="disabled").form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
+                input(disabled="disabled").max.form-control(type="text",name="[0][0][1]",value="#{table[0][0][1]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
+                input.col2.max.form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
               else
-                input(disabled="disabled").form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
+                input(disabled="disabled").max.form-control(type="text",name="[0][0][2]",value="#{table[0][0][2]}")
         td
-          .row
+          .row.row1
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
+                input.col0.form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][1][0]",value="#{table[0][1][0]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
+                input.col1.form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][1][1]",value="#{table[0][1][1]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
+                input.col2.form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][1][2]",value="#{table[0][1][2]}")
         td
-          .row
+          .row.row2
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
+                input.col0.form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][2][0]",value="#{table[0][2][0]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
+                input.col1.form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][2][1]",value="#{table[0][2][1]}")
             .col-xs-4
               if succeed !== true
-                input.form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
+                input.col2.form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
               else
                 input(disabled="disabled").form-control(type="text",name="[0][2][2]",value="#{table[0][2][2]}")
         if table
@@ -159,54 +159,54 @@ block content
           tr
             td.name P#{index}
             td
-              .row
+              .row.row0
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
+                    input.col0.max.form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
                   else
-                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
+                    input(disabled="disabled").col1.col1.max.form-control(type="text",name="[#{index}][0][0]",value="#{item[0][0]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
+                    input.col1.max.form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
                   else
-                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
+                    input(disabled="disabled").max.form-control(type="text",name="[#{index}][0][1]",value="#{item[0][1]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
+                    input.col2.max.form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
                   else
-                    input(disabled="disabled").form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
+                    input(disabled="disabled").max.form-control(type="text",name="[#{index}][0][2]",value="#{item[0][2]}")
             td
-              .row
+              .row.row1
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
+                    input.col0.form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][1][0]",value="#{item[1][0]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
+                    input.col1.form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][1][1]",value="#{item[1][1]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
+                    input.col2.form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][1][2]",value="#{item[1][2]}")
             td
-              .row
+              .row.row2
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
+                    input.col0.form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][2][0]",value="#{item[2][0]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
+                    input.col1.form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][2][1]",value="#{item[2][1]}")
                 .col-xs-4
                   if succeed !== true
-                    input.form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
+                    input.col2.form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
                   else
                     input(disabled="disabled").form-control(type="text",name="[#{index}][2][2]",value="#{item[2][2]}")
             td
