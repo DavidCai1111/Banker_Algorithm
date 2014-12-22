@@ -41,7 +41,15 @@ $(function() {
                     var input = $(e.target);
                     var valueAfter = input.val();
                     var patten = new RegExp(/^[0-9]+$/);
-                    if (patten.test(valueAfter) !== true || valueAfter < 0 || valueAfter > 99 || valueAfter.length > 2) {
+
+                    
+                    if ($(this).hasClass("max")) {
+                        alert("max列为自动计算（Allocation+Need）所得，所以不能修改max列");
+                        input.attr("value", valueBefore);
+                        input.val(valueBefore);
+                        return;
+                    } 
+                    else if (patten.test(valueAfter) !== true || valueAfter < 0 || valueAfter > 99 || valueAfter.length > 2) {
                         alert("输入的数需要是一个小于100的两位正整数！");
                         input.attr("value", valueBefore);
                         input.val(valueBefore);
@@ -50,11 +58,8 @@ $(function() {
                         valueAfter = valueAfter.slice(1, 2);
                         input.attr("value", valueAfter);
                         input.val(valueAfter);
-                    } else if ($(this).hasClass("max")) {
-                        alert("max列为自动计算（Allocation+Need）所得，所以不能修改max列");
-                        input.attr("value", valueBefore);
-                        input.val(valueBefore);
-                    } else if (!$(this).hasClass("avai")) {
+                    }
+                    else if (!$(this).hasClass("avai")) {
                         if ($(this).hasClass('col0')) {
                             var tr = $(this).parent().parent().parent().parent();
                             max_fix(0, tr);
