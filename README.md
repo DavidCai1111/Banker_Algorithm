@@ -15,6 +15,9 @@ http://123.57.73.34/
 
     |-- 安装依赖
   	    |-- npm install
+
+  	|-- 部署
+  		|-- 目录下：forever ./bin/www
 	
 ###3，运行
   	|-- 根据每个进程(默认为5个，可自行添加删除)的Allocation，Need，Available向量，使用
