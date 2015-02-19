@@ -9,6 +9,6 @@ function clone(o){
         }
     }
     return ret;
-};
+}
 
 module.exports = clone;

@@ -17,14 +17,14 @@ $(function() {
                 names[pos].nextSibling.nextSibling.nextSibling.firstChild.firstChild.firstChild.setAttribute('name', "[" + i + "]" + "[2][0]");
                 names[pos].nextSibling.nextSibling.nextSibling.firstChild.firstChild.nextSibling.firstChild.setAttribute('name', "[" + i + "]" + "[2][1]");
                 names[pos].nextSibling.nextSibling.nextSibling.firstChild.firstChild.nextSibling.nextSibling.firstChild.setAttribute('name', "[" + i + "]" + "[2][2]");
-            };
+            }
         });
         $(".add").click(function(e) {
             e.preventDefault();
             var lenNow = $(".name").length + 1;
             $(".avai").attr("rowspan", function() {
                 this.rowSpan++;
-                return this.rowSpan
+                return this.rowSpan;
             });
             $("tbody").append('<tr><td class="name">P' + lenNow + '</td><td><div class="row row0"><div class="col-xs-4"><input type="text" name="[' + lenNow + '][0][0]" value="0" class="form-control max col0"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][0][1]" value="0" class="col1 max form-control"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][0][2]" value="0" class="form-control max col2"></div></div></td><td><div class="row row1"><div class="col-xs-4"><input type="text" name="[' + lenNow + '][1][0]" value="0" class="form-control col0"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][1][1]" value="0" class="form-control col1"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][1][2]" value="0" class="form-control col2"></div></div></td><td><div class="row row2"><div class="col-xs-4"><input type="text" name="[' + lenNow + '][2][0]" value="0" class="form-control col0"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][2][1]" value="0" class="form-control col1"></div><div class="col-xs-4"><input type="text" name="[' + lenNow + '][2][2]" value="0" class="form-control col2"></div></div></td><td><button disabled="disabled" class="btn-danger btn">false</button></td><td><button class="btn-danger btn del">delete</button></td></tr>');
             validate();
@@ -72,7 +72,7 @@ $(function() {
                             var tr = $(this).parent().parent().parent().parent();
                             max_fix(2, tr);
                         }
-                    };
+                    }
 
                     function max_fix(pos, tr) {
                         var str1 = '.row0' + ' .col' + pos;
@@ -82,8 +82,8 @@ $(function() {
                         var allocation = tr.find(str2);
                         var need = tr.find(str3);
                         max.val(parseInt(allocation.val()) + parseInt(need.val()));
-                    };
+                    }
             });
-        };
+        }
         validate();
 });

@@ -103,10 +103,9 @@ router.get('/', function(req, res) {
         '2': 2,
         '3': 1
     };
-    console.log(req.session.table);
     var lenOfP = 0;
     for (var arr in req.session.table) {
-        lenOfP++
+        lenOfP++;
     }
     lenOfP--;
     res.render('index', {
@@ -128,10 +127,7 @@ router.post('/validate', function(req, res) {
         len++;
     }
     len--;
-    console.log("received!");
-    console.log(_body);
     passed = validate(_body);
-    console.log(req.session.requ);
     if (passed.length === len) {
         res.render('index', {
             title: '银行家算法',
@@ -160,13 +156,11 @@ router.post('/sendReq', function(req, res) {
     var _table = clone(req.session.table);
     var __table;
     var vali = false;
-    console.log(_requ[3]);
     var len = 0;
     for (var arr in req.session.table) {
         len++;
     }
     len--;
-    console.log("len: " + len);
     if (parseInt(_requ[3]) >= len) {
         return res.render('index', {
             title: '银行家算法',
@@ -176,11 +170,9 @@ router.post('/sendReq', function(req, res) {
             table: req.session.table,
             lenOfP: len
         });
-    };
+    }
     if (req.session.table[_requ[3].toString()][2][0] >= _requ[0] && req.session.table[_requ[3].toString()][2][1] >= _requ[1] && req.session.table[_requ[3].toString()][2][2] >= _requ[2]) {
-        console.log("NEED passed");
     } else {
-        console.log("NEED failed");
         return res.render('index', {
             title: '银行家算法',
             succeed: true,
@@ -191,9 +183,7 @@ router.post('/sendReq', function(req, res) {
         });
     }
     if (req.session.table.avai[0] >= _requ[0] && req.session.table.avai[1] >= _requ[1] && req.session.table.avai[2] >= _requ[2]) {
-        console.log("AVAI passed");
     } else {
-        console.log("AVAI failed");
         return res.render('index', {
             title: '银行家算法',
             succeed: true,
@@ -215,7 +205,6 @@ router.post('/sendReq', function(req, res) {
     _table[_requ[3].toString()][1][2] = (parseInt(_table[_requ[3].toString()][1][2]) + parseInt(_requ[2])).toString();
 
     __table = clone(_table);
-    console.log("__table: " + __table);
     passed = validate(_table);
 
     if (passed.length === len) {
